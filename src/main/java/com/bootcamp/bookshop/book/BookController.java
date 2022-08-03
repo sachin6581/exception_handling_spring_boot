@@ -20,8 +20,6 @@ public class BookController {
     @GetMapping("/books")
     List<BookResponse> list() {
         List<Book> books = bookService.fetchAll();
-        return books.stream()
-                .map(book -> book.toResponse())
-                .collect(Collectors.toList());
+        throw new NullPointerException();
     }
 }
